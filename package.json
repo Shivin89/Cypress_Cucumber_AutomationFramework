@@ -1,0 +1,56 @@
+{
+  "name": "cypress-bdd-demo",
+  "version": "1.0.0",
+  "description": "This repository is used to demo cypress test in BDD style:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "package": "npm run test:ci && npm run build",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivin89/Cypress_Cucumber_AutomationFramework.git"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    },
+    "step_definitions": "**/cypress/e2e/**/*.js",
+    "stepDefinitions": "**/cypress/e2e/**/*.js"
+  },
+  "author": "Shivin Saraf",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "@cypress/webpack-preprocessor": "^5.11.1",
+    "@types/cypress": "^1.1.3",
+    "@types/cypress-cucumber-preprocessor": "^4.0.1",
+    "@types/node": "^16.11.26",
+    "@types/styled-components": "^5.1.24",
+    "cucumber": "^6.0.7",
+    "cypress": "^10.11.0",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
+    "cypress-sql-server": "^1.0.0",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "multiple-cucumber-html-reporter": "^3.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cypress-xpath": "^2.0.1"
+  }
+}
